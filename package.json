@@ -1,0 +1,28 @@
+{
+  "name": "qrcar",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "qrcode.react": "^3.1.0",
+    "framer-motion": "^11.1.0",
+    "uuid": "^9.0.1",
+    "react-hot-toast": "^2.4.1",
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.3",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3"
+  }
+}
