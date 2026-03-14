@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import { supabase } from '../lib/supabase'
 import toast from 'react-hot-toast'
 
@@ -14,8 +15,17 @@ const STEPS = [
 ]
 
 export default function HomePage() {
+
+
   const [user, setUser]       = useState(null)
   const [signingIn, setSignin] = useState(false)
+const router = useRouter()
+// Detect token in URL hash and redirect to callback
+useEffect(() => {
+  if (window.location.hash.includes('access_token')) {
+    router.push('/auth/callback' + window.location.hash)
+  }
+}, [])
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => setUser(session?.user ?? null))
