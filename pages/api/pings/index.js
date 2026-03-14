@@ -1,5 +1,6 @@
 // pages/api/pings/index.js
-import { getServiceClient, createClient } from '../../../lib/supabase'
+import { createClient } from '@supabase/supabase-js'
+import { getServiceClient } from '../../../lib/supabase'
 
 export default async function handler(req, res) {
 
