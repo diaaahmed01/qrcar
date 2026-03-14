@@ -1,5 +1,6 @@
 // pages/api/owners/index.js
 import { createClient } from '@supabase/supabase-js'
+import { getServiceClient } from '../../../lib/supabase'
 
 export default async function handler(req, res) {
   // Auth check
